@@ -10,4 +10,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["python3","-m","WebStreamer"]
+RUN ["chmod", "+x", "start.sh"]
+CMD ["bash", "start.sh"]
