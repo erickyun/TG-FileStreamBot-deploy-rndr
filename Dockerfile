@@ -4,7 +4,8 @@ WORKDIR /app
 
 COPY requirements.txt ./
 
-RUN apk add build-base bash
+# Install build-base, bash, and curl
+RUN apk add build-base bash curl
 
 RUN pip install --no-cache-dir -r requirements.txt
 
